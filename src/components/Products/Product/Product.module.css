@@ -1,0 +1,34 @@
+.card {
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 8px;
+  box-shadow: 0 -10px 16px 0 rgb(0 0 0 / 5%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img {
+  display: block;
+  height: 120px;
+  margin: 0 auto 1em;
+}
+
+.title {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #00113d;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.shop {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #17baef;
+  border: 1px solid#17baef;
+  width: 80%;
+  display: inline-block;
+  margin: 0 auto;
+}

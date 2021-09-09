@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Container from './components/UI/Container/Container';
+import Products from './components/Products/Products';
+import Search from './components/Search/Search';
 
-function App() {
+
+function App({ data }) {
+
+  const [products, setProducts] = useState(data);
+  const [searchInput, setSearchInput] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <section className="section section--primary-bg box-shadow">
+        <Container>
+          <Search
+            value={searchInput}
+            setValue={setSearchInput}
+            setProducts={setProducts}
+          />
+          <h3 className="section__sub-heading">{data.length} BEST</h3>
+          <h2 className="section__heading">Products</h2>
+        </Container>
+      </section>
+      <section className="section">
+        <Container>
+          <Products products={products} />
+        </Container>
+      </section>
     </div>
   );
 }
